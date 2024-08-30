@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Animation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #0a0a0a;
+        }
+
+
+        .c-homeIntro {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  max-width: none;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  padding: 80px 0 40px;
+}
+
+@media (min-width: 667px) {
+  .c-homeIntro {
+    padding: 80px 0 120px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c-homeIntro {
+    padding: 100px 0 160px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .c-homeIntro {
+    min-height: calc(100vh - 140px);
+    padding: 100px 0 200px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .c-homeIntro {
+    padding: 160px 0 240px;
+  }
+}
+
+.c-homeIntro__buzzwords {
+  width: 100%;
+  line-height: .9;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.c-buzzwords .c-buzzwords__line {
+  position: relative;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.c-buzzwords .c-buzzwords__charWrapper {
+  position: relative;
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.c-buzzwords .c-buzzwords__charWrapper:nth-child(n) {
+  z-index: n + 1;
+}
+
+.c-buzzwords .c-buzzwords__charWrapper .c-buzzwords__char {
+  font-weight: 900;
+  letter-spacing: -2px;
+  font-size: 40px;
+  color: #fff;
+}
+
+.c-buzzwords .c-buzzwords__line.is-ready .c-buzzwords__charWrapper {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform .75s cubic-bezier(.175, .885, .32, 2.275) 1.35s, opacity .75s cubic-bezier(.175, .885, .32, 2.275) 1.35s;
+}
+
+.c-buzzwords .c-buzzwords__barBefore {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  opacity: 0;
+  z-index: 20;
+  transform: translateX(0);
+}
+
+.c-buzzwords .c-buzzwords__line.is-ready .c-buzzwords__barBefore {
+  animation: d 1.85s alternate forwards cubic-bezier(.175, .885, .32, 1.275);
+}
+
+.c-buzzwords .c-buzzwords__barAfter {
+  background-color: #1a1a1a;
+  position: absolute;
+  left: -20px;
+  right: -20px;
+  height: 1px;
+  opacity: 0;
+  top: 50%;
+  z-index: 30;
+  transform: translateX(-100vw);
+  transition: opacity .5s cubic-bezier(.175, .885, .32, 1.275) 0ms, transform .5s cubic-bezier(.175, .885, .32, 1.275) 0ms;
+}
+
+.c-buzzwords .c-buzzwords__line.is-ready .c-buzzwords__barAfter {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 3.35s;
+}
+
+@keyframes d {
+  0%, to {
+    left: 0;
+    width: 0;
+    opacity: 0;
+  }
+
+  50% {
+    left: 0;
+    width: 100%;
+    opacity: 1;
+  }
+
+  55% {
+    right: 0;
+    left: auto;
+    opacity: 1;
+    width: 100%;
+    transform: translateX(0);
+    animation-timing-function: cubic-bezier(.68, -.55, .265, 1.55);
+  }
+
+  to {
+    right: 0;
+    left: auto;
+    opacity: 0;
+    width: 0;
+    transform: translateX(200px);
+    animation-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+  }
+}
+
+    </style>
+</head>
+
+<body>
+
+<div class="c-homeIntro__buzzwords c-buzzwords js_buzzwordsTrigger is-ready">
+    <div class="c-buzzwords__line js_lineTrigger is-ready">
+        <div class="c-buzzwords__barBefore"></div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                B</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                i</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                k</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                e</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                s</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                .</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                &nbsp;</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                C</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                o</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger jumpingLetter">
+            <div class="c-buzzwords__char">
+                d</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger jumpingLetter">
+            <div class="c-buzzwords__char">
+                e</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                .</div>
+        </div>
+    </div>
+    <div class="c-buzzwords__line js_lineTrigger is-ready">
+        <div class="c-buzzwords__barBefore"></div>
+        <div class="c-buzzwords__charWrapper  js_charTrigger">
+            <div class="c-buzzwords__char">
+                D</div>
+        </div>
+        <div class="c-buzzwords__charWrapper  js_charTrigger">
+            <div class="c-buzzwords__char">
+                e</div>
+        </div>
+        <div class="c-buzzwords__charWrapper  js_charTrigger">
+            <div class="c-buzzwords__char">
+                s</div>
+        </div>
+        <div class="c-buzzwords__charWrapper  js_charTrigger">
+            <div class="c-buzzwords__char">
+                i</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                g</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                n</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                .</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                &nbsp;</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                C</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                o</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                f</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                f</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                e</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                e</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                .</div>
+        </div>
+    </div>
+    <div class="c-buzzwords__line js_lineTrigger is-ready">
+        <div class="c-buzzwords__barBefore"></div>
+        <div class="c-buzzwords__charWrapper  js_charTrigger">
+            <div class="c-buzzwords__char">
+                P</div>
+        </div>
+        <div class="c-buzzwords__charWrapper  js_charTrigger">
+            <div class="c-buzzwords__char">
+                h</div>
+        </div>
+        <div class="c-buzzwords__charWrapper  js_charTrigger">
+            <div class="c-buzzwords__char">
+                o</div>
+        </div>
+        <div class="c-buzzwords__charWrapper  js_charTrigger">
+            <div class="c-buzzwords__char">
+                t</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                o</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                g</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                r</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                a</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger jumpingLetter">
+            <div class="c-buzzwords__char">
+                p</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                h</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                y</div>
+        </div>
+        <div class="c-buzzwords__charWrapper  js_charTrigger">
+            <div class="c-buzzwords__char">
+                .</div>
+        </div>
+    </div>
+    <div class="c-buzzwords__line js_lineTrigger is-ready">
+        <div class="c-buzzwords__barBefore"></div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                K</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                e</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                y</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                b</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                o</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                a</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                r</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger jumpingLetter">
+            <div class="c-buzzwords__char">
+                d</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                s</div>
+        </div>
+        <div class="c-buzzwords__charWrapper js_charTrigger">
+            <div class="c-buzzwords__char">
+                .</div>
+        </div>
+    </div>
+</div>
+
+    
+</body>
+
+</html>
