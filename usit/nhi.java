@@ -10,7 +10,7 @@ public class nhi {
         a2:
         for (j = 0; j < 3; j++) {
           if (i == j)
-            continuea1;
+            
         System.out.print(i + "\t" + j);
           
         }
