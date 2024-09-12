@@ -6,6 +6,90 @@
     "configurations": [
         {
             "type": "java",
+            "name": "leftsidepatterf",
+            "request": "launch",
+            "mainClass": "pattern.nirbhay.leftsidepatterf",
+            "projectName": "java_16498c1f"
+        },
+        {
+            "type": "java",
+            "name": "leftsidepatter",
+            "request": "launch",
+            "mainClass": "pattern.nirbhay.leftsidepatter",
+            "projectName": "java_16498c1f"
+        },
+        {
+            "type": "java",
+            "name": "patter9",
+            "request": "launch",
+            "mainClass": "pattern.nirbhay.patter9",
+            "projectName": "java_16498c1f"
+        },
+        {
+            "type": "java",
+            "name": "patter8",
+            "request": "launch",
+            "mainClass": "pattern.nirbhay.patter8",
+            "projectName": "java_16498c1f"
+        },
+        {
+            "type": "java",
+            "name": "reverse",
+            "request": "launch",
+            "mainClass": "pattern.nirbhay.reverse",
+            "projectName": "java_16498c1f"
+        },
+        {
+            "type": "java",
+            "name": "leftsidepatter6",
+            "request": "launch",
+            "mainClass": "pattern.nirbhay.leftsidepatter6",
+            "projectName": "java_16498c1f"
+        },
+        {
+            "type": "java",
+            "name": "topright6",
+            "request": "launch",
+            "mainClass": "pattern.nirbhay.topright6",
+            "projectName": "java_16498c1f"
+        },
+        {
+            "type": "java",
+            "name": "toptobuttom5",
+            "request": "launch",
+            "mainClass": "pattern.nirbhay.toptobuttom5",
+            "projectName": "java_16498c1f"
+        },
+        {
+            "type": "java",
+            "name": "numberright",
+            "request": "launch",
+            "mainClass": "pattern.nirbhay.numberright",
+            "projectName": "java_16498c1f"
+        },
+        {
+            "type": "java",
+            "name": "right",
+            "request": "launch",
+            "mainClass": "pattern.nirbhay.right",
+            "projectName": "java_16498c1f"
+        },
+        {
+            "type": "java",
+            "name": "leftside",
+            "request": "launch",
+            "mainClass": "pattern.nirbhay.leftside",
+            "projectName": "java_16498c1f"
+        },
+        {
+            "type": "java",
+            "name": "squre",
+            "request": "launch",
+            "mainClass": "pattern.nirbhay.squre",
+            "projectName": "java_16498c1f"
+        },
+        {
+            "type": "java",
             "name": "inscertion",
             "request": "launch",
             "mainClass": "inscertion",
