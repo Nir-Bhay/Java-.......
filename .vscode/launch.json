@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "xor",
+            "request": "launch",
+            "mainClass": "xor",
+            "projectName": "java_16498c1f"
+        },
+        {
+            "type": "java",
             "name": "and",
             "request": "launch",
             "mainClass": "and",
