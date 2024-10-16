@@ -11,5 +11,6 @@ public class xor {
         }
         return uniq; // Returns the unique element
     }
+
     
 }

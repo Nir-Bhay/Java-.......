@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 Java-.......
+=======
+# Java-.......
+>>>>>>> b96caa9ed6fef47addca463f4627606cc9795f36
 Here is my entire Java file that I created for learning Java, from beginner to advanced. I upload one or two files daily, depending on the topic I've learned. The files are not arranged according to any specific topic; they are in a random order, meant only for me to remember any concepts I might have missed learning.
