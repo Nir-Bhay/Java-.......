@@ -2,6 +2,7 @@ public class and {
     public static void main(String[] args) {
         int n = 9;
         System.out.println(chekodd(n));
+        
         System.out.println(checkeven(n));
     }
 
