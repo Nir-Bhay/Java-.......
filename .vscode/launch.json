@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "shu",
+            "request": "launch",
+            "mainClass": "shu",
+            "projectName": "java_5d909755"
+        },
+        {
+            "type": "java",
+            "name": "patternrecursino",
+            "request": "launch",
+            "mainClass": "patternrecursino",
+            "projectName": "java_5d909755"
+        },
+        {
+            "type": "java",
+            "name": "Untitled",
+            "request": "launch",
+            "mainClass": "Untitled",
+            "projectName": "java_16498c1f"
+        },
+        {
+            "type": "java",
+            "name": "main",
+            "request": "launch",
+            "mainClass": "main",
+            "projectName": "java_16498c1f"
+        },
+        {
+            "type": "java",
             "name": "xor",
             "request": "launch",
             "mainClass": "xor",
